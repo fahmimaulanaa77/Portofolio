@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portofolio Desain Grafis — Nama Anda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Portofolio desain grafis — kumpulan proyek, layanan, dan kontak." />
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #94a3b8;
+      --accent: #7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      --radius: 14px;
+      --gap: 20px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,var(--bg),#071027);}
+    a{color:inherit;text-decoration:none}
+
+    /* Layout */
+    .container{max-width:1100px;margin:40px auto;padding:32px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+    h1{font-size:20px;margin:0}
+    .tag{color:var(--muted);font-size:13px}
+
+    /* Nav */
+    nav a{margin-left:18px;padding:8px 12px;border-radius:10px;font-size:14px}
+    nav a.cta{background:linear-gradient(90deg,var(--accent),#5b21b6);box-shadow:0 6px 20px rgba(124,58,237,0.18);color:white}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:var(--gap);align-items:center;margin-bottom:28px}
+    .intro{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:28px;border-radius:var(--radius);backdrop-filter: blur(6px);}
+    .intro h2{margin:0 0 8px 0;font-size:28px}
+    .intro p{margin:0;color:var(--muted);line-height:1.6}
+    .cta-row{margin-top:18px;display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:12px;font-weight:600;border:1px solid rgba(255,255,255,0.04);cursor:pointer}
+    .btn.primary{background:var(--accent);color:white}
+    .btn.ghost{background:transparent;color:var(--muted)}
+
+    /* Quick info card */
+    .card{background:var(--card);padding:18px;border-radius:12px}
+    .profile{display:flex;gap:14px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(180deg,#1f2937,#0f1724);display:flex;align-items:center;justify-content:center;color:#cbd5e1;font-weight:700;font-size:28px}
+    .meta h3{margin:0}
+    .meta p{margin:4px 0 0 0;color:var(--muted);font-size:14px}
+
+    /* Gallery */
+    .section{margin:34px 0}
+    .section h3{margin:0 0 14px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .thumb{border-radius:12px;overflow:hidden;position:relative;background:linear-gradient(135deg,#07102a,#0c1221);min-height:200px;display:flex;align-items:flex-end}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .thumb .label{position:absolute;left:12px;bottom:12px;background:linear-gradient(90deg,rgba(0,0,0,0.6),rgba(0,0,0,0.2));padding:8px 10px;border-radius:8px;color:white;font-weight:600;font-size:13px}
+
+    /* Responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr} .grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:600px){.grid{grid-template-columns:1fr} .container{padding:20px;margin:20px auto}}
+
+    /* Footer */
+    footer{margin-top:28px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+
+    /* Small utilities */
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{background:var(--glass);padding:8px 10px;border-radius:10px;color:var(--muted);font-size:13px}
+
+    /* Subtle hover */
+    .thumb:hover{transform:translateY(-6px);transition:transform .28s cubic-bezier(.2,.9,.3,1)}
+    .card, .intro, .thumb{transition:box-shadow .25s ease}
+    .card:hover{box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+
+    /* Contact form */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:#dbeafe}
+    textarea{min-height:120px}
+    .muted-small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">Y</div>
+        <div>
+          <h1>Fahmi Maulana — Desainer Grafis</h1>
+          <div class="tag">Branding • Editorial • Packaging • UI Micrographics</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Hubungi</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="intro">
+        <h2>Selamat datang — saya pembuat visual yang fokus pada cerita merek.</h2>
+        <p>Saya menggabungkan tipografi, warna, dan komposisi untuk membuat identitas visual yang berkesan. Di bawah ini adalah pilihan proyek terbaru saya — klik untuk melihat detail atau unduh resume.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#work">Lihat Portofolio</a>
+          <a class="btn ghost" href="#contact">Minta Penawaran</a>
+        </div>
+        <div style="margin-top:18px" class="chips">
+          <span class="chip">Branding</span>
+          <span class="chip">Packaging</span>
+          <span class="chip">Print</span>
+          <span class="chip">Motion</span>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div class="profile">
+          <div class="avatar">NY</div>
+          <div class="meta">
+            <h3>Fahmi Maulana</h3>
+            <p>Desainer grafis freelance — Jakarta</p>
+            <p class="muted-small">Tersedia untuk proyek brand & kolaborasi.</p>
+          </div>
+        </div>
+        <hr style="margin:14px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+        <div style="display:flex;gap:10px;justify-content:space-between">
+          <div>
+            <div style="font-weight:700">8+</div>
+            <div class="muted-small">Tahun pengalaman</div>
+          </div>
+          <div>
+            <div style="font-weight:700">120+</div>
+            <div class="muted-small">Proyek selesai</div>
+          </div>
+          <div>
+            <div style="font-weight:700">40+</div>
+            <div class="muted-small">Klien</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="work" class="section">
+      <h3>Proyek Unggulan</h3>
+      <div class="grid">
+        <a class="thumb" href="#"><img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="project 1"><span class="label">Branding — Kopi Lokal</span></a>
+        <a class="thumb" href="#"><img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="project 2"><span class="label">Packaging — Camilan</span></a>
+        <a class="thumb" href="#"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="project 3"><span class="label">Editorial — Majalah</span></a>
+        <a class="thumb" href="#"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="project 4"><span class="label">UI — Aplikasi Keuangan</span></a>
+        <a class="thumb" href="#"><img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="project 5"><span class="label">Poster — Event</span></a>
+        <a class="thumb" href="#"><img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="project 6"><span class="label">Identitas — Startup</span></a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h3>Tentang Saya</h3>
+      <div class="card" style="padding:20px">
+        <p>Saya adalah desainer grafis dengan pengalaman di branding, packaging, dan desain editorial. Saya suka bekerja memakai pendekatan penelitian-ke-visual sehingga setiap desain punya alasan estetika dan bisnis di baliknya.</p>
+        <p style="margin-top:12px" class="muted-small">Tools favorit: Adobe Illustrator, Photoshop, InDesign, Figma.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h3>Kontak</h3>
+      <div class="grid" style="grid-template-columns:1fr 380px">
+        <div>
+          <div class="card">
+            <form id="contactForm">
+              <label class="muted-small">Nama</label>
+              <input id="nama" placeholder="Nama Anda" />
+              <label class="muted-small">Email</label>
+              <input id="email" placeholder="email@domain.com" />
+              <label class="muted-small">Pesan</label>
+              <textarea id="pesan" placeholder="Tulis pesan singkat tentang proyek Anda..."></textarea>
+              <div style="margin-top:8px;display:flex;gap:8px;justify-content:flex-end">
+                <button type="reset" class="btn ghost">Reset</button>
+                <button type="submit" class="btn primary">Kirim</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <aside class="card">
+          <h4 style="margin-top:0">Detail</h4>
+          <p class="muted-small">Email: <strong>fahimaulanaa77@gmail.com</strong></p>
+          <p class="muted-small">Telepon/WA: <strong>+62 812 3456 7890</strong></p>
+          <p class="muted-small">Lokasi: Jakarta, Indonesia</p>
+          <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+          <p class="muted-small">Ingin file presentasi, case study, atau harga? Sebutkan ruang lingkup proyek dan estimasi anggaran — saya akan kirim penawaran.</p>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Nama Anda — Desain Grafis</div>
+      <div class="muted-small">Made with ❤️ — Replace placeholder images & info</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Simple image click preview (lightbox)
+    document.querySelectorAll('.thumb').forEach(t=>t.addEventListener('click', e=>{
+      e.preventDefault();
+      const src = t.querySelector('img').src;
+      const modal = document.createElement('div');
+      modal.style.position='fixed';modal.style.inset=0;modal.style.background='rgba(2,6,23,0.85)';modal.style.display='flex';modal.style.alignItems='center';modal.style.justifyContent='center';modal.style.zIndex=9999;
+      const img = document.createElement('img');img.src=src;img.style.maxWidth='92%';img.style.maxHeight='92%';img.style.boxShadow='0 20px 60px rgba(2,6,23,0.8)';img.style.borderRadius='12px';
+      modal.appendChild(img);
+      modal.addEventListener('click', ()=>document.body.removeChild(modal));
+      document.body.appendChild(modal);
+    }))
+
+    // Form submit to open email client
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const nama = document.getElementById('nama').value;
+      const email = document.getElementById('email').value;
+      const pesan = document.getElementById('pesan').value;
+      const subject = encodeURIComponent('Pesan dari Portofolio: ' + nama);
+      const body = encodeURIComponent('Nama: ' + nama + '\nEmail: ' + email + '\n\nPesan:\n' + pesan);
+      window.location.href = `mailto:nama@domain.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
